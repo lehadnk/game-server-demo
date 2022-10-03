@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  dspgsql:
+    container_name: dspgsql
+    image: postgres:14.5
+    env_file: .env
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5450:5432"
+
+volumes:
+  pgdata:
